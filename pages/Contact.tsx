@@ -1,0 +1,147 @@
+
+import React from 'react';
+import { CONTACT, ICONS } from '../constants';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="bg-white pb-24">
+      {/* Header */}
+      <section className="bg-brand text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Kontakt</h1>
+          <p className="text-lg text-white/70">
+            Wir sind für Sie da. Melden Sie sich gerne telefonisch oder per Nachricht.
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 -mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          {/* Contact Details Cards */}
+          <div className="lg:col-span-1 space-y-6">
+            <div className="bg-white p-8 rounded-3xl shadow-lg border border-brand/5">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                  <ICONS.Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-500 uppercase">Telefon</h3>
+                  <a href={`tel:${CONTACT.phone.replace(/\s+/g, '')}`} className="text-lg font-bold text-brand hover:underline">
+                    {CONTACT.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                  <ICONS.Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-500 uppercase">E-Mail</h3>
+                  <a href={`mailto:${CONTACT.email}`} className="text-lg font-bold text-brand hover:underline">
+                    {CONTACT.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                  <ICONS.Location className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-500 uppercase">Anschrift</h3>
+                  <p className="text-gray-700 font-medium">{CONTACT.address}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-brand-accent p-8 rounded-3xl border border-brand/10">
+              <h4 className="font-bold text-brand mb-2">Bürozeiten</h4>
+              <p className="text-gray-700">{CONTACT.openingHours}</p>
+              <h4 className="font-bold text-brand mb-2 mt-4">Einzugsgebiet</h4>
+              <p className="text-gray-700">{CONTACT.serviceArea}</p>
+              <p className="text-xs text-gray-500 mt-4 italic">
+                Hinweis: In dringenden pflegerischen Notfällen sind wir für unsere Patienten rund um die Uhr erreichbar.
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-brand/5">
+              <h3 className="text-2xl font-serif font-bold text-brand mb-8">Schreiben Sie uns</h3>
+              
+              <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+                <input type="hidden" name="access_key" value="7ac58a77-a441-4f08-a8cc-3f735b6159ca" />
+                <input type="hidden" name="subject" value="Neue Kontaktanfrage - Dora GmbH" />
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">Ihr Name</label>
+                    <input 
+                      type="text" 
+                      name="name" 
+                      required 
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
+                      placeholder="Max Mustermann"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">E-Mail Adresse</label>
+                    <input 
+                      type="email" 
+                      name="email" 
+                      required 
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
+                      placeholder="email@beispiel.de"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Telefonnummer (optional)</label>
+                  <input 
+                    type="tel" 
+                    name="phone" 
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
+                    placeholder="+49 123 456789"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Ihre Nachricht</label>
+                  <textarea 
+                    name="message" 
+                    rows={5} 
+                    required 
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all resize-none"
+                    placeholder="Wie können wir Ihnen helfen?"
+                  ></textarea>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" required className="mt-1 accent-brand" id="dsgvo" />
+                  <label htmlFor="dsgvo" className="text-xs text-gray-500">
+                    Ich willige ein, dass meine Angaben zur Kontaktaufnahme gespeichert werden. Weitere Informationen finden Sie in der <a href="#/datenschutz" className="underline">Datenschutzerklärung</a>.
+                  </label>
+                </div>
+
+                <button 
+                  type="submit" 
+                  className="w-full bg-brand text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-brand-light transition-colors active:scale-[0.98]"
+                >
+                  Nachricht absenden
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
