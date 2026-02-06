@@ -11,7 +11,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, features }) => {
   return (
-    <div className="group bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-brand/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+    <div className="group bg-white p-10 md:p-12 rounded-[3rem] shadow-sm border border-brand/5 hover:shadow-xl transition-all duration-500 flex flex-col h-full">
       {icon && (
         <div className="w-20 h-20 bg-brand-accent rounded-[1.5rem] flex items-center justify-center text-brand mb-8 transform group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-500 shadow-sm">
           {icon}

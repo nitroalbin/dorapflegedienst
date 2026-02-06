@@ -21,9 +21,9 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-sm font-bold uppercase tracking-widest mb-8">
-              <ICONS.Heart className="w-4 h-4" />
-              <span>Dora GmbH – Wir sind für Sie da</span>
+            <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-base font-bold uppercase tracking-widest mb-8">
+              <ICONS.Heart className="w-5 h-5" />
+              <span>Ambulanter Pflegedienst – Dora GmbH</span>
             </div>
             
             <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-6 leading-[1.05]">

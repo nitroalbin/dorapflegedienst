@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { BRAND, CONTACT, ICONS } from '../constants';
 
 const Home: React.FC = () => {
+  React.useEffect(() => {
+    document.title = 'Ambulanter Pflegedienst Dora GmbH | Pflege mit Herz in Frankfurt & Offenbach';
+  }, []);
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -19,9 +23,9 @@ const Home: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8 border border-white/20 backdrop-blur-md">
-              <ICONS.Heart className="w-4 h-4" />
-              <span>Dora GmbH – Ambulanter Pflegedienst</span>
+            <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/10 text-brand-accent text-sm font-bold uppercase tracking-[0.2em] mb-8 border border-white/20 backdrop-blur-md">
+              <ICONS.Heart className="w-5 h-5" />
+              <span>Ambulanter Pflegedienst – Dora GmbH</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-[1.05]">
               Pflege mit Herz, <br />

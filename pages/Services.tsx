@@ -5,53 +5,52 @@ import ServiceCard from '@/components/ServiceCard';
 import { CONTACT, ICONS } from '@/constants';
 
 const Services: React.FC = () => {
+  React.useEffect(() => {
+    document.title = 'Leistungen | Ambulanter Pflegedienst Dora GmbH';
+  }, []);
+
   const services = [
     {
       title: "Behandlungspflege (SGB V)",
-      description: "Medizinisch notwendige Maßnahmen, die von Ihrem Arzt verordnet werden. Unser Fachpersonal stellt sicher, dass die Therapieziele im häuslichen Umfeld erreicht werden.",
+      description: "Die Behandlungspflege umfasst alle medizinischen Maßnahmen, die von einem Arzt verordnet und von unseren examinierten Pflegefachkräften bei Ihnen zu Hause durchgeführt werden. Dazu gehören beispielsweise die professionelle Wundversorgung bei chronischen oder akuten Wunden, das Verabreichen von Injektionen wie Insulin bei Diabetes, die regelmäßige Medikamentengabe und deren Überwachung sowie das An- und Ausziehen von Kompressionsstrümpfen. Auch die Versorgung von Kathetern und Stomata, Blutdruck- und Blutzuckermessungen sowie die Dekubitusbehandlung fallen in diesen Bereich. Das Besondere: Diese Leistungen werden von Ihrer Krankenkasse bezahlt – Sie benötigen keinen Pflegegrad, sondern lediglich eine Verordnung von Ihrem Arzt.",
       icon: <ICONS.Medical className="w-12 h-12" />,
-      features: ["Wundversorgung & Verbandwechsel", "Injektionen (z.B. Insulin)", "Medikamentengabe & Überwachung", "Blutdruck- & Blutzuckermessung"]
+      features: ["Wundversorgung & Verbandwechsel", "Injektionen (z.B. Insulin)", "Medikamentengabe & Überwachung", "Blutdruck- & Blutzuckermessung", "Kompressionsstrümpfe an-/ausziehen", "Katheter- & Stomapflege"]
     },
     {
       title: "Grundpflege",
-      description: "Unterstützung im Alltag mit Würde, Respekt und Zeit. Wir begleiten Sie einfühlsam bei allen grundpflegerischen Tätigkeiten.",
+      description: "Die Grundpflege – auch körperbezogene Pflegemaßnahmen genannt – unterstützt Sie bei allen alltäglichen Verrichtungen, die Sie nicht mehr selbstständig bewältigen können. Unsere einfühlsamen Pflegekräfte helfen Ihnen bei der Körperpflege wie Waschen, Duschen, Baden und Zahnpflege, beim An- und Auskleiden sowie bei der Haar- und Nagelpflege. Wir unterstützen Sie bei der Nahrungsaufnahme, helfen beim Aufstehen, Hinsetzen und Gehen und sorgen für regelmäßige Lagerung bei bettlägerigen Patienten. Auch die Begleitung zur Toilette und die Inkontinenzversorgung gehören selbstverständlich dazu. Dabei legen wir größten Wert auf Ihre Würde und Selbstbestimmung – wir fördern Ihre Eigenständigkeit, wo immer es möglich ist.",
       icon: <ICONS.Bath className="w-12 h-12" />,
-      features: ["Ganzkörper- & Teilwaschungen", "Hilfe beim An- & Auskleiden", "Unterstützung bei der Nahrungsaufnahme", "Lagerung & Mobilisation"]
+      features: ["Ganzkörper- & Teilwaschungen", "Hilfe beim An- & Auskleiden", "Unterstützung bei der Nahrungsaufnahme", "Lagerung & Mobilisation", "Inkontinenzversorgung", "Haar- & Nagelpflege"]
     },
     {
       title: "Pflegeberatung (§ 37 SGB XI)",
-      description: "Kompetente Beratung für Pflegebedürftige und ihre Angehörigen. Wir unterstützen Sie bei allen Fragen rund um die Pflege und helfen Ihnen, die beste Versorgung zu finden.",
+      description: "Unser Beratungsangebot richtet sich an alle Pflegebedürftigen und ihre Angehörigen, die Unterstützung im Dschungel der Pflegeleistungen benötigen. Bei den gesetzlich vorgeschriebenen Beratungsbesuchen nach § 37.3 SGB XI kommen wir zu Ihnen nach Hause, schauen uns die aktuelle Pflegesituation an und geben praktische Tipps zur Verbesserung. Wir informieren Sie umfassend über alle Leistungen, die Ihnen zustehen – von Pflegegeld über Verhinderungspflege bis zum Entlastungsbetrag. Darüber hinaus helfen wir Ihnen bei der Antragstellung für einen Pflegegrad oder eine Höherstufung und bereiten Sie optimal auf den MDK-Besuch vor. Unser Ziel ist es, dass Sie alle Leistungen erhalten, die Ihnen zustehen.",
       icon: <ICONS.Shield className="w-12 h-12" />,
-      features: ["Beratungsbesuche nach § 37.3 SGB XI", "Hilfe bei Pflegegradanträgen", "Information über Leistungsansprüche", "Individuelle Pflegeplanung"]
+      features: ["Beratungsbesuche nach § 37.3 SGB XI", "Hilfe bei Pflegegradanträgen", "Information über Leistungsansprüche", "Individuelle Pflegeplanung", "MDK-Vorbereitung", "Angehörigenberatung"]
     },
     {
       title: "Betreuung & Entlastung",
-      description: "Zusätzliche Betreuungsleistungen nach § 45b SGB XI zur Förderung der Lebensqualität und Entlastung pflegender Angehöriger.",
+      description: "Unsere Betreuungs- und Entlastungsleistungen gehen über die reine Pflege hinaus und fördern Ihre Lebensqualität und sozialen Kontakte. Wir begleiten Sie bei Spaziergängen an der frischen Luft, führen Gespräche, spielen Gesellschaftsspiele oder machen gemeinsam Gedächtnistraining. Auch die Begleitung zu Arztbesuchen, Behördengängen oder kulturellen Veranstaltungen gehört zu unserem Angebot. Für pflegende Angehörige bieten wir stundenweise Entlastung an – nutzen Sie die Zeit für eigene Termine, Erholung oder einfach mal durchatmen. Diese Leistungen können über den Entlastungsbetrag von 125€ monatlich finanziert werden, der jedem Pflegebedürftigen mit Pflegegrad 1-5 zusteht.",
       icon: <ICONS.Heart className="w-12 h-12" />,
-      features: ["Alltagsbegleitung & Spaziergänge", "Gedächtnistraining", "Begleitung zu Arztbesuchen", "Stundenweise Entlastung"]
+      features: ["Alltagsbegleitung & Spaziergänge", "Gedächtnistraining", "Begleitung zu Arztbesuchen", "Stundenweise Entlastung", "Gesellschaft & Gespräche", "Vorlesen & Spielen"]
     },
     {
       title: "Verhinderungspflege",
-      description: "Verhinderungspflege zur Entlastung pflegender Angehöriger.",
+      description: "Die Verhinderungspflege ist eine wichtige Leistung für pflegende Angehörige, die eine Auszeit benötigen. Wenn Sie als pflegender Angehöriger krank werden, einen wichtigen Termin haben oder einfach mal in den Urlaub fahren möchten, springen wir ein und übernehmen die Pflege. Die Pflegekasse zahlt dafür bis zu 1.612€ pro Jahr – und zusätzlich können Sie bis zu 806€ aus der Kurzzeitpflege umwidmen, sodass insgesamt bis zu 2.418€ zur Verfügung stehen. Die Verhinderungspflege kann tageweise oder auch stundenweise genutzt werden. Bei stundenweiser Nutzung unter 8 Stunden täglich wird das Pflegegeld nicht gekürzt. So können Sie regelmäßig kleine Auszeiten nehmen, ohne finanzielle Einbußen.",
       icon: <ICONS.Users className="w-12 h-12" />,
-      features: [
-        "Vertretung der Pflegepersonen",
-        "Wenn pflegende Angehörige krank sind",
-        "Wenn pflegende Angehörige Urlaub benötigen",
-        "Übernahme der Kosten durch die Pflegekasse"
-      ]
+      features: ["Vertretung bei Krankheit", "Vertretung bei Urlaub", "Stundenweise Entlastung", "Bis zu 2.418€ pro Jahr", "Flexible Nutzung", "Kombination mit Kurzzeitpflege"]
     },
     {
       title: "Hauswirtschaftliche Hilfe",
-      description: "Wir unterstützen Sie bei der Bewältigung Ihres Haushalts, damit Sie sich in Ihren eigenen vier Wänden rundum wohlfühlen können.",
+      description: "Ein sauberes und gepflegtes Zuhause trägt wesentlich zu Ihrem Wohlbefinden bei. Unsere hauswirtschaftliche Versorgung umfasst alle Tätigkeiten rund um den Haushalt, die Sie nicht mehr selbst erledigen können. Wir reinigen Ihre Wohnung, waschen und bügeln Ihre Wäsche, beziehen die Betten und sorgen für Ordnung. Auch der Einkauf von Lebensmitteln und Alltagsgegenständen gehört dazu – wir achten dabei auf Ihre Vorlieben und Gewohnheiten. Auf Wunsch bereiten wir Ihnen auch frische Mahlzeiten zu, spülen das Geschirr und entsorgen den Müll. So können Sie sicher und komfortabel in Ihren eigenen vier Wänden leben, ohne sich um den Haushalt sorgen zu müssen.",
       icon: <ICONS.HomeService className="w-12 h-12" />,
-      features: ["Reinigen der Wohnung", "Wäschepflege & Bügeln", "Einkaufsservice", "Zubereitung von Mahlzeiten"]
+      features: ["Reinigen der Wohnung", "Wäschepflege & Bügeln", "Einkaufsservice", "Zubereitung von Mahlzeiten", "Betten beziehen", "Müllentsorgung"]
     },
     {
-      title: "Vermittlung",
-      description: "Wir vermitteln Ihnen zuverlässige Zusatzleistungen für Ihren Alltag – alles aus einer Hand für Ihre Sicherheit und Bequemlichkeit.",
+      title: "Vermittlung von Zusatzleistungen",
+      description: "Als Ihr Pflegedienst kümmern wir uns nicht nur um die direkte Pflege, sondern helfen Ihnen auch dabei, weitere wichtige Leistungen zu organisieren. Wir vermitteln Ihnen einen Hausnotruf, der besonders für Alleinlebende mehr Sicherheit bedeutet – auf Knopfdruck ist rund um die Uhr Hilfe erreichbar. Auch bei der Organisation von Essen auf Rädern unterstützen wir Sie, sodass Sie täglich eine warme, ausgewogene Mahlzeit erhalten. Wir koordinieren Fahrdienste für Arztbesuche oder Therapien und helfen bei der Beschaffung von Hilfsmitteln wie Pflegebetten, Rollatoren oder Toilettenstühlen. So haben Sie einen Ansprechpartner für alle Fragen rund um Ihre Versorgung.",
       icon: <ICONS.Star className="w-12 h-12" />,
-      features: ["Essen auf Rädern", "Hausnotruf-Systeme", "Fahrdienste", "Hilfsmittelversorgung"]
+      features: ["Hausnotruf-Systeme", "Essen auf Rädern", "Fahrdienste", "Hilfsmittelversorgung", "Pflegebetten & Rollatoren", "Koordination aller Anbieter"]
     }
   ];
 
