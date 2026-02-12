@@ -43,6 +43,10 @@ const Footer: React.FC = () => {
                   {CONTACT.email}
                 </a>
               </li>
+              <li className="flex items-center gap-3">
+                <ICONS.Phone className="w-5 h-5 text-white/50 shrink-0" />
+                <span>Fax: {CONTACT.fax}</span>
+              </li>
             </ul>
           </div>
 

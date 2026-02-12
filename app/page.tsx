@@ -106,6 +106,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Einzugsgebiet Banner */}
+      <section className="bg-brand py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center">
+            <ICONS.Location className="w-6 h-6 text-brand-accent" />
+            <span className="font-semibold">Einzugsgebiet:</span>
+            <span>Alle Stadtteile in Frankfurt und Offenbach – auf Anfrage bedienen wir auch andere Gebiete</span>
+          </div>
+        </div>
+      </section>
+
       {/* 3. WARUM WIR? (USPs) */}
       <section className="py-32 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

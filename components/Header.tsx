@@ -22,10 +22,10 @@ const Header: React.FC = () => {
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold text-brand tracking-tight font-serif group-hover:text-brand-light transition-colors">
-                DORA GMBH
+                Ambulanter Pflegedienst
               </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-medium -mt-1">
-                Ambulanter Pflegedienst
+                Dora GmbH
               </span>
             </div>
           </Link>
