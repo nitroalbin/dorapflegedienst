@@ -76,7 +76,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Brief Service Overview with Images */}
-      <section className="py-32 bg-brand-accent">
+      <section className="py-20 bg-brand-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-brand text-sm font-black uppercase tracking-[0.3em] mb-4">Was wir bieten</h2>
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Warum Wir Section - FLEXBOX */}
-      <section className="py-32 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             
@@ -200,7 +200,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="bg-brand py-32 relative overflow-hidden">
+      <section className="bg-brand py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent rounded-full -mr-48 -mt-48 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent rounded-full -ml-48 -mb-48 blur-3xl"></div>

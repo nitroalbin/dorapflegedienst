@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* 2. LEISTUNGEN OVERVIEW */}
-      <section className="py-32 bg-brand-accent/30 relative">
+      <section className="py-20 bg-brand-accent/30 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
@@ -106,19 +106,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Einzugsgebiet Banner */}
-      <section className="bg-brand py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center">
-            <ICONS.Location className="w-6 h-6 text-brand-accent" />
-            <span className="font-semibold">Einzugsgebiet:</span>
-            <span>Alle Stadtteile in Offenbach und Frankfurt am Main – auf Anfrage bedienen wir auch andere Gebiete</span>
-          </div>
-        </div>
-      </section>
-
       {/* 3. WARUM WIR? (USPs) - NEU */}
-      <section className="py-32 bg-white overflow-hidden relative">
+      <section className="py-20 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             
@@ -197,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* 4. TRUST ELEMENTS */}
-      <section className="py-32 bg-brand-accent/20">
+      <section className="py-20 bg-brand-accent/20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-serif font-bold text-brand mb-16">Was unsere Kunden sagen</h2>
           
