@@ -13,10 +13,10 @@ export const CONTACT = {
   mobile: "0160 – 8089444",
   fax: "069 – 800 894 45",
   email: "info@pd-dora.de",
-  address: "Kaiserleistraße 43, 63067 Offenbach",
+  address: "Kaiserleistraße 43, 63067 Offenbach am Main",
   openingHours: "Mo. - Fr.: 09:00 - 16:00 Uhr",
   city: "Offenbach",
-  serviceArea: "Alle Stadtteile in Frankfurt und Offenbach. Auf Anfrage bedienen wir auch andere Gebiete."
+  serviceArea: "Alle Stadtteile in Offenbach und Frankfurt am Main. Auf Anfrage bedienen wir auch andere Gebiete."
 };
 
 export const NAVIGATION = [

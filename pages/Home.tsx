@@ -124,51 +124,77 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Warum Wir Section */}
+      {/* Warum Wir Section - FLEXBOX */}
       <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="relative">
-            <div className="rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
-              <img 
-                src="/warumwir.webp?v=20260129" 
-                alt="Happy senior" 
-                className="w-full aspect-[4/5] object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand rounded-3xl -z-0 opacity-10"></div>
-            <div className="absolute top-10 -right-10 bg-brand text-white p-10 rounded-3xl shadow-2xl z-20 hidden md:block">
-              <ICONS.Star className="w-12 h-12 mb-4 text-brand-accent" />
-              <p className="text-2xl font-serif font-bold">100%</p>
-              <p className="text-xs uppercase tracking-widest font-bold opacity-60">Engagement</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-brand text-sm font-black uppercase tracking-[0.3em] mb-4">Warum wir?</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-12 leading-tight">Menschlichkeit ist unsere höchste Priorität.</h3>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-              {[
-                { title: "Bezugspflege", desc: "Wir setzen auf feste Ansprechpartner für echtes Vertrauen.", icon: <ICONS.Users className="w-6 h-6" /> },
-                { title: "24h Erreichbarkeit", desc: "Im Notfall sind wir rund um die Uhr als verlässlicher Partner an Ihrer Seite.", icon: <ICONS.Clock className="w-6 h-6" /> },
-                { title: "Individuelle Beratung", desc: "Wir nehmen uns Zeit für Ihre Situation und planen maßgeschneidert.", icon: <ICONS.Shield className="w-6 h-6" /> },
-                { title: "Höchste Qualität", desc: "Regelmäßige Schulungen sichern erstklassige medizinische Standards.", icon: <ICONS.Check className="w-6 h-6" /> }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4">
+            {/* TEXT BLOCK - zuerst im DOM = oben auf mobile */}
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-brand text-sm font-black uppercase tracking-[0.3em] mb-4">Warum wir?</h2>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-12 leading-tight">Menschlichkeit ist unsere höchste Priorität.</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                <div className="flex gap-4">
                   <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand">
-                    {item.icon}
+                    <ICONS.Users className="w-6 h-6" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-brand-dark mb-1">{item.title}</h5>
-                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                    <h5 className="font-bold text-brand-dark mb-1">Bezugspflege</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Wir setzen auf feste Ansprechpartner für echtes Vertrauen.</p>
                   </div>
                 </div>
-              ))}
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand">
+                    <ICONS.Clock className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">24h Erreichbarkeit</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Im Notfall sind wir rund um die Uhr als verlässlicher Partner an Ihrer Seite.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand">
+                    <ICONS.Shield className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">Individuelle Beratung</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Wir nehmen uns Zeit für Ihre Situation und planen maßgeschneidert.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand">
+                    <ICONS.Check className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">Höchste Qualität</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Regelmäßige Schulungen sichern erstklassige medizinische Standards.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <Link to="/ueber-uns" className="mt-16 inline-flex items-center gap-4 bg-brand text-white px-10 py-5 rounded-full text-lg font-bold shadow-xl hover:bg-brand-light transition-all">
+                Mehr über unser Team erfahren
+              </Link>
+            </div>
+
+            {/* BILD BLOCK - zweites im DOM = unten auf mobile */}
+            <div className="w-full lg:w-1/2 relative">
+              <div className="rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
+                <img 
+                  src="/warumwir.webp?v=20260129" 
+                  alt="Happy senior" 
+                  className="w-full aspect-[4/5] object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand rounded-3xl -z-0 opacity-10"></div>
+              <div className="absolute top-10 -right-10 bg-brand text-white p-10 rounded-3xl shadow-2xl z-20 hidden md:block">
+                <ICONS.Star className="w-12 h-12 mb-4 text-brand-accent" />
+                <p className="text-2xl font-serif font-bold">100%</p>
+                <p className="text-xs uppercase tracking-widest font-bold opacity-60">Engagement</p>
+              </div>
             </div>
             
-            <Link to="/ueber-uns" className="mt-16 inline-flex items-center gap-4 bg-brand text-white px-10 py-5 rounded-full text-lg font-bold shadow-xl hover:bg-brand-light transition-all">
-              Mehr über unser Team erfahren
-            </Link>
           </div>
         </div>
       </section>

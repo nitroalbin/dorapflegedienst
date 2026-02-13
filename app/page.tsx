@@ -112,60 +112,86 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center">
             <ICONS.Location className="w-6 h-6 text-brand-accent" />
             <span className="font-semibold">Einzugsgebiet:</span>
-            <span>Alle Stadtteile in Frankfurt und Offenbach – auf Anfrage bedienen wir auch andere Gebiete</span>
+            <span>Alle Stadtteile in Offenbach und Frankfurt am Main – auf Anfrage bedienen wir auch andere Gebiete</span>
           </div>
         </div>
       </section>
 
-      {/* 3. WARUM WIR? (USPs) */}
+      {/* 3. WARUM WIR? (USPs) - NEU */}
       <section className="py-32 bg-white overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="relative">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-accent rounded-full blur-3xl opacity-50" aria-hidden="true"></div>
-            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10">
-              <img 
-                src="/warumwir.webp?v=20260129" 
-                alt="Einfühlsame Pflege" 
-                className="w-full aspect-[4/5] object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute -bottom-10 -right-10 bg-brand text-white p-10 rounded-[2rem] shadow-2xl z-20 max-w-[280px]">
-              <ICONS.Shield className="w-12 h-12 mb-4 text-brand-accent opacity-50" aria-hidden="true" />
-              <p className="text-lg font-bold">Zertifizierte Qualität & Herzlichkeit</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-brand text-sm font-black uppercase tracking-[0.3em] mb-4">Ihre Vorteile</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-12">Warum sich Patienten für Dora entscheiden</h3>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {[
-                { title: "Feste Ansprechpartner", desc: "Wir setzen auf Bezugspflege für echtes Vertrauen.", icon: <ICONS.Users className="w-6 h-6" /> },
-                { title: "Individuelle Pflege", desc: "Keine Standardlösungen. Wir planen nach Ihrem Bedarf.", icon: <ICONS.Heart className="w-6 h-6" /> },
-                { title: "24h Erreichbarkeit", desc: "Im Notfall sind wir rund um die Uhr als Partner an Ihrer Seite.", icon: <ICONS.Clock className="w-6 h-6" /> },
-                { title: "Zuverlässig", desc: "Pünktlichkeit und Kontinuität sind für uns selbstverständlich.", icon: <ICONS.Shield className="w-6 h-6" /> }
-              ].map((usp, i) => (
-                <div key={i} className="flex gap-4">
+            {/* TEXT BLOCK */}
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-brand text-sm font-black uppercase tracking-[0.3em] mb-4">Ihre Vorteile</h2>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-12">Warum sich Patienten für Dora entscheiden</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="flex gap-4">
                   <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand" aria-hidden="true">
-                    {usp.icon}
+                    <ICONS.Users className="w-6 h-6" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-brand-dark mb-1">{usp.title}</h5>
-                    <p className="text-sm text-gray-500 leading-relaxed">{usp.desc}</p>
+                    <h5 className="font-bold text-brand-dark mb-1">Feste Ansprechpartner</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Wir setzen auf Bezugspflege für echtes Vertrauen.</p>
                   </div>
                 </div>
-              ))}
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand" aria-hidden="true">
+                    <ICONS.Heart className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">Individuelle Pflege</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Keine Standardlösungen. Wir planen nach Ihrem Bedarf.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand" aria-hidden="true">
+                    <ICONS.Clock className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">24h Erreichbarkeit</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Im Notfall sind wir rund um die Uhr als Partner an Ihrer Seite.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-brand-accent flex items-center justify-center text-brand" aria-hidden="true">
+                    <ICONS.Shield className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-dark mb-1">Zuverlässig</h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">Pünktlichkeit und Kontinuität sind für uns selbstverständlich.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-16 p-8 rounded-3xl bg-brand-dark text-white">
+                <p className="text-brand-accent font-bold mb-2">Haben Sie Fragen zur Finanzierung?</p>
+                <p className="text-white/70 text-sm mb-6">Wir beraten Sie kostenlos zu Pflegegraden und Krankenkassenleistungen.</p>
+                <Link href="/kontakt" className="inline-block border-b border-brand-accent text-brand-accent font-bold pb-1 hover:text-white transition-colors">
+                  Beratungstermin vereinbaren
+                </Link>
+              </div>
+            </div>
+
+            {/* BILD BLOCK */}
+            <div className="w-full lg:w-1/2 relative">
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-accent rounded-full blur-3xl opacity-50" aria-hidden="true"></div>
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10">
+                <img 
+                  src="/warumwir.webp?v=20260129" 
+                  alt="Einfühlsame Pflege" 
+                  className="w-full aspect-[4/5] object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -bottom-10 -right-10 bg-brand text-white p-10 rounded-[2rem] shadow-2xl z-20 max-w-[280px]">
+                <ICONS.Shield className="w-12 h-12 mb-4 text-brand-accent opacity-50" aria-hidden="true" />
+                <p className="text-lg font-bold">Zertifizierte Qualität & Herzlichkeit</p>
+              </div>
             </div>
             
-            <div className="mt-16 p-8 rounded-3xl bg-brand-dark text-white">
-              <p className="text-brand-accent font-bold mb-2">Haben Sie Fragen zur Finanzierung?</p>
-              <p className="text-white/70 text-sm mb-6">Wir beraten Sie kostenlos zu Pflegegraden und Krankenkassenleistungen.</p>
-              <Link href="/kontakt" className="inline-block border-b border-brand-accent text-brand-accent font-bold pb-1 hover:text-white transition-colors">
-                Beratungstermin vereinbaren
-              </Link>
-            </div>
           </div>
         </div>
       </section>
